@@ -29,6 +29,6 @@ Este es un proyecto de aplicación web básica para gestionar la asistencia del 
    git clone https://github.com/tu_usuario/gestion-asistencia.git
 
 ## Ejecución
-- Iniciar XAMPP
+- Iniciar XAMPP (el código debe ser descargado en la carpeta htdocs de Xampp)
 - Habilitar Apache y MySql
 - En el navegador web ingresar a la ruta de index.html
