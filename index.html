@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Asistencia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Asistencia</h1>
+        <button id="addEmployeeBtn">Agregar Empleado</button>
+        
+        <div id="addEmployeeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="addEmployeeForm">
+                    <div class="form-group">
+                        <label for="cedula">Cédula:</label>
+                        <input type="text" id="cedula" name="cedula" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" id="cargo" name="cargo" required>
+                    </div>
+                    <button type="submit">Agregar</button>
+                </form>
+            </div>
+        </div>
+
+        <form id="attendanceForm">
+            <div class="form-group">
+                <label for="cedula">Cédula del Empleado:</label>
+                <input type="text" id="cedula" name="cedula" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo">Tipo de Registro:</label>
+                <select id="tipo" name="tipo">
+                    <option value="entrada">Entrada</option>
+                    <option value="salida">Salida</option>
+                </select>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+        <div class="attendance-list" id="attendanceList">
+            <h2>Lista de Asistencia de Hoy</h2>
+            <div id="list">
+                <!-- Los registros se mostrarán aquí -->
+            </div>
+        </div>
+        <button onclick="generateReport()">Generar Reporte Semanal</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
